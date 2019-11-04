@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>iSuite360 | Dashboard</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.7 -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.min.css">
+    <!-- jvectormap -->
+    <link rel="stylesheet" href="bower_components/jvectormap/jquery-jvectormap.css">
+
+    <!-- Material Design Icons -->
+    <link
+        href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+        rel="stylesheet">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+            folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+    <link rel="stylesheet" href="custom.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    <!-- Google Font -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper">
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                <span class="logo-mini"><img src="source/logo-small.png" alt="Logo Sm"></span>
+                <!-- logo for regular state and mobile devices -->
+                <span class="logo-lg"><img src="source/logo.png" alt="Logo Lg"></span>
+            </a>
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+                <!-- Navbar Right Menu -->
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        <!-- Control Sidebar Toggle Button -->
+                        <li>
+                            <a href="#" data-toggle="control-sidebar">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M19.5022 12C19.5022 12.34 19.4722 12.66 19.4322 12.98L21.5422 14.63C21.7322 14.78 21.7822 15.05 21.6622 15.27L19.6622 18.73C19.5722 18.89 19.4022 18.98 19.2322 18.98C19.1722 18.98 19.1122 18.97 19.0522 18.95L16.5622 17.95C16.0422 18.34 15.4822 18.68 14.8722 18.93L14.4922 21.58C14.4622 21.82 14.2522 22 14.0022 22H10.0022C9.75221 22 9.54221 21.82 9.51221 21.58L9.13221 18.93C8.52221 18.68 7.96221 18.35 7.44221 17.95L4.95221 18.95C4.90221 18.97 4.84221 18.98 4.78221 18.98C4.60221 18.98 4.43221 18.89 4.34221 18.73L2.34221 15.27C2.22221 15.05 2.27221 14.78 2.46221 14.63L4.57221 12.98C4.53221 12.66 4.50221 12.33 4.50221 12C4.50221 11.67 4.53221 11.34 4.57221 11.02L2.46221 9.37C2.27221 9.22 2.21221 8.95 2.34221 8.73L4.34221 5.27C4.43221 5.11 4.60221 5.02 4.77221 5.02C4.83221 5.02 4.89221 5.03 4.95221 5.05L7.44221 6.05C7.96221 5.66 8.52221 5.32 9.13221 5.07L9.51221 2.42C9.54221 2.18 9.75221 2 10.0022 2H14.0022C14.2522 2 14.4622 2.18 14.4922 2.42L14.8722 5.07C15.4822 5.32 16.0422 5.65 16.5622 6.05L19.0522 5.05C19.1022 5.03 19.1622 5.02 19.2222 5.02C19.4022 5.02 19.5722 5.11 19.6622 5.27L21.6622 8.73C21.7822 8.95 21.7322 9.22 21.5422 9.37L19.4322 11.02C19.4722 11.34 19.5022 11.66 19.5022 12ZM17.5022 12C17.5022 11.79 17.4922 11.58 17.4522 11.27L17.3122 10.14L18.2022 9.44L19.2722 8.59L18.5722 7.38L17.3022 7.89L16.2422 8.32L15.3322 7.62C14.9322 7.32 14.5322 7.09 14.1022 6.91L13.0422 6.48L12.8822 5.35L12.6922 4H11.3022L11.1022 5.35L10.9422 6.48L9.88221 6.91C9.47221 7.08 9.06221 7.32 8.63221 7.64L7.73221 8.32L6.69221 7.9L5.42221 7.39L4.72221 8.6L5.80221 9.44L6.69221 10.14L6.55221 11.27C6.52221 11.57 6.50221 11.8 6.50221 12C6.50221 12.2 6.52221 12.43 6.55221 12.74L6.69221 13.87L5.80221 14.57L4.72221 15.41L5.42221 16.62L6.69221 16.11L7.75221 15.68L8.66221 16.38C9.06221 16.68 9.46221 16.91 9.89221 17.09L10.9522 17.52L11.1122 18.65L11.3022 20H12.7022L12.9022 18.65L13.0622 17.52L14.1222 17.09C14.5322 16.92 14.9422 16.68 15.3722 16.36L16.2722 15.68L17.3122 16.1L18.5822 16.61L19.2822 15.4L18.2022 14.56L17.3122 13.86L17.4522 12.73C17.4822 12.43 17.5022 12.21 17.5022 12ZM12.0022 8C9.79221 8 8.00221 9.79 8.00221 12C8.00221 14.21 9.79221 16 12.0022 16C14.2122 16 16.0022 14.21 16.0022 12C16.0022 9.79 14.2122 8 12.0022 8ZM10.0022 12C10.0022 13.1 10.9022 14 12.0022 14C13.1022 14 14.0022 13.1 14.0022 12C14.0022 10.9 13.1022 10 12.0022 10C10.9022 10 10.0022 10.9 10.0022 12Z"
+                                        fill="#7F8FA4" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="dropdown language-menu">
+                            <!-- TODO language -->
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="source/eng.png"
+                                    alt="Lang"> English <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#"><img src="source/spanish.png" alt="Lang"> Spanish</a></li>
+                                <li><a href="#"><img src="source/french.png" alt="Lang"> French</a></li>
+                            </ul>
+                        </li>
+                        <!-- Notifications: style can be found in dropdown.less -->
+                        <li class="dropdown notifications-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M18 15.75V10.75C18 7.68 16.37 5.11 13.5 4.43V3.75C13.5 2.92 12.83 2.25 12 2.25C11.17 2.25 10.5 2.92 10.5 3.75V4.43C7.64 5.11 6 7.67 6 10.75V15.75L4 17.75V18.75H20V17.75L18 15.75ZM12 21.75C13.1 21.75 14 20.85 14 19.75H10C10 20.85 10.9 21.75 12 21.75ZM8 16.75H16V10.75C16 8.27 14.49 6.25 12 6.25C9.51 6.25 8 8.27 8 10.75V16.75Z"
+                                        fill="#7F8FA4" />
+                                </svg>
+
+                                <span class="label label-warning">3</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="header">You have 10 notifications</li>
+                                <li>
+                                    <!-- inner menu: contains the actual data -->
+                                    <ul class="menu">
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-warning text-yellow"></i> Very long description here
+                                                that may not fit into the
+                                                page and may cause design problems
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-users text-red"></i> 5 new members joined
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-shopping-cart text-green"></i> 25 sales made
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-user text-red"></i> You changed your username
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="footer"><a href="#">View all</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- User Account: style can be found in dropdown.less -->
+                        <li class="dropdown user user-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                                <span class="hidden-xs">Sierra Ferguson <small>Aadmin Officer</small></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <!-- User image -->
+                                <li class="user-header">
+                                    <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                                    <p>
+                                        Sierra Ferguson - <small>Admin Officer</small>
+                                        <small>Member since Nov. 2012</small>
+                                    </p>
+                                </li>
+                                <!-- Menu Body -->
+                                <li class="user-body">
+                                    <div class="row">
+                                        <div class="col-xs-4 text-center">
+                                            <a href="#">Followers</a>
+                                        </div>
+                                        <div class="col-xs-4 text-center">
+                                            <a href="#">Sales</a>
+                                        </div>
+                                        <div class="col-xs-4 text-center">
+                                            <a href="#">Friends</a>
+                                        </div>
+                                    </div>
+                                    <!-- /.row -->
+                                </li>
+                                <!-- Menu Footer-->
+                                <li class="user-footer">
+                                    <div class="pull-left">
+                                        <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                    </div>
+                                    <div class="pull-right">
+                                        <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+                <!-- sidebar menu: : style can be found in sidebar.less -->
+                <ul class="sidebar-menu" data-widget="tree">
+                    <li class="treeview menu-open">
+                        <a href="#">
+                            <img src="source/icons/leftbar/dashboard.svg" class="not-hover" alt="Dashboard">
+                            <img src="source/icons/leftbar/dashboard_hover.svg" class="when-hover" alt="Dashboard">
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <img src="source/icons/leftbar/org.svg" class="not-hover" alt="Icon">
+                            <img src="source/icons/leftbar/org_hover.svg" class="when-hover" alt="Icon">
+                            <span>Organization</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-right pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="#"><img src="source/icons/leftbar/property.svg" alt="Icon"> Properties</a></li>
+                            <li><a href="residents.html"><img src="source/icons/leftbar/residents.svg" alt="Icon"> Residents</a></li>
+                            <li><a href="#"><img src="source/icons/leftbar/visitors.svg" alt="Icon"> Visitors</a></li>
+                            <li><a href="#"><img src="source/icons/leftbar/visitors.svg" alt="Icon"> Guards</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <img src="source/icons/leftbar/cususer.svg" class="not-hover" alt="Icon">
+                            <img src="source/icons/leftbar/cususer_hover.svg" class="when-hover" alt="Icon">
+                            <span>Custom Users</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-right pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="#"><img src="source/icons/leftbar/cususer.svg" alt="Icon"> Users</a></li>
+                            <li><a href="#"><img src="source/icons/leftbar/userrole.svg" alt="Icon"> Roles</a></li>
+                            <li><a href="#"><img src="source/icons/leftbar/permission.svg" alt="Icon"> Permissions</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <img src="source/icons/leftbar/equ.svg" class="not-hover" alt="Icon">
+                            <img src="source/icons/leftbar/equ_hover.svg" class="when-hover" alt="Icon">
+                            <span>Equipment</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-right pull-right"></i>
+                            </span>
+                        </a>
+                        <!--  <ul class="treeview-menu">
+                                <li><a href="#"><i class="fa fa-circle-o"></i> Equipment 1</a></li>
+                                <li><a href="#"><i class="fa fa-circle-o"></i> Equipment 2</a></li>
+                                <li><a href="#"><i class="fa fa-circle-o"></i> Equipment 3</a></li>
+                                <li><a href="#"><i class="fa fa-circle-o"></i> Equipment 4</a></li>
+                            </ul> -->
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <img src="source/icons/leftbar/access.svg" class="not-hover" alt="Icon">
+                            <img src="source/icons/leftbar/access_hover.svg" class="when-hover" alt="Icon">
+                            <span>Acess</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-right pull-right"></i>
+                            </span>
+                        </a>
+                        <!--   <ul class="treeview-menu">
+                                <li><a href="#"><i class="fa fa-circle-o"></i> Acess 1</a></li>
+                                <li><a href="#"><i class="fa fa-circle-o"></i> Acess 2</a></li>
+                                <li><a href="#"><i class="fa fa-circle-o"></i> Acess 3</a></li>
+                                <li><a href="#"><i class="fa fa-circle-o"></i> Acess 4</a></li>
+                            </ul> -->
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <img src="source/icons/leftbar/facility.svg" class="not-hover" alt="Icon">
+                            <img src="source/icons/leftbar/facility_hover.svg" class="when-hover" alt="Icon">
+                            <span>Facilities</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-right pull-right"></i>
+                            </span>
+                        </a>
+                        <!-- <ul class="treeview-menu">
+                                <li><a href="#"><i class="fa fa-circle-o"></i> Facility 1</a></li>
+                                <li><a href="#"><i class="fa fa-circle-o"></i> Facility 2</a></li>
+                                <li><a href="#"><i class="fa fa-circle-o"></i> Facility 3</a></li>
+                                <li><a href="#"><i class="fa fa-circle-o"></i> Facility 4</a></li>
+                            </ul> -->
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <img src="source/icons/leftbar/incident.svg" class="not-hover" alt="Icon">
+                            <img src="source/icons/leftbar/incident_hover.svg" class="when-hover" alt="Icon">
+                            <span>Incident</span>
+                        </a>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <img src="source/icons/leftbar/reports.svg" class="not-hover" alt="Icon">
+                            <img src="source/icons/leftbar/reports_hover.svg" class="when-hover" alt="Icon">
+                            <span>Reports</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-right pull-right"></i>
+                            </span>
+                        </a>
+                        <!--  <ul class="treeview-menu">
+                                <li><a href="#"><i class="fa fa-circle-o"></i> Report 1</a></li>
+                                <li><a href="#"><i class="fa fa-circle-o"></i> Report 2</a></li>
+                                <li><a href="#"><i class="fa fa-circle-o"></i> Report 3</a></li>
+                                <li><a href="#"><i class="fa fa-circle-o"></i> Report 4</a></li>
+                            </ul> -->
+                    </li>
+
+
+
+
+
+
+                </ul>
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <section class="content-header icon-breadcrumb">
+                <h1>
+                    Dashboard
+                </h1>
+                <div class="breadcrumb pull-right">
+                    <button type="button" class="btn btn-link" data-toggle="modal" data-target="#modal-default">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M19.5022 12C19.5022 12.34 19.4722 12.66 19.4322 12.98L21.5422 14.63C21.7322 14.78 21.7822 15.05 21.6622 15.27L19.6622 18.73C19.5722 18.89 19.4022 18.98 19.2322 18.98C19.1722 18.98 19.1122 18.97 19.0522 18.95L16.5622 17.95C16.0422 18.34 15.4822 18.68 14.8722 18.93L14.4922 21.58C14.4622 21.82 14.2522 22 14.0022 22H10.0022C9.75221 22 9.54221 21.82 9.51221 21.58L9.13221 18.93C8.52221 18.68 7.96221 18.35 7.44221 17.95L4.95221 18.95C4.90221 18.97 4.84221 18.98 4.78221 18.98C4.60221 18.98 4.43221 18.89 4.34221 18.73L2.34221 15.27C2.22221 15.05 2.27221 14.78 2.46221 14.63L4.57221 12.98C4.53221 12.66 4.50221 12.33 4.50221 12C4.50221 11.67 4.53221 11.34 4.57221 11.02L2.46221 9.37C2.27221 9.22 2.21221 8.95 2.34221 8.73L4.34221 5.27C4.43221 5.11 4.60221 5.02 4.77221 5.02C4.83221 5.02 4.89221 5.03 4.95221 5.05L7.44221 6.05C7.96221 5.66 8.52221 5.32 9.13221 5.07L9.51221 2.42C9.54221 2.18 9.75221 2 10.0022 2H14.0022C14.2522 2 14.4622 2.18 14.4922 2.42L14.8722 5.07C15.4822 5.32 16.0422 5.65 16.5622 6.05L19.0522 5.05C19.1022 5.03 19.1622 5.02 19.2222 5.02C19.4022 5.02 19.5722 5.11 19.6622 5.27L21.6622 8.73C21.7822 8.95 21.7322 9.22 21.5422 9.37L19.4322 11.02C19.4722 11.34 19.5022 11.66 19.5022 12ZM17.5022 12C17.5022 11.79 17.4922 11.58 17.4522 11.27L17.3122 10.14L18.2022 9.44L19.2722 8.59L18.5722 7.38L17.3022 7.89L16.2422 8.32L15.3322 7.62C14.9322 7.32 14.5322 7.09 14.1022 6.91L13.0422 6.48L12.8822 5.35L12.6922 4H11.3022L11.1022 5.35L10.9422 6.48L9.88221 6.91C9.47221 7.08 9.06221 7.32 8.63221 7.64L7.73221 8.32L6.69221 7.9L5.42221 7.39L4.72221 8.6L5.80221 9.44L6.69221 10.14L6.55221 11.27C6.52221 11.57 6.50221 11.8 6.50221 12C6.50221 12.2 6.52221 12.43 6.55221 12.74L6.69221 13.87L5.80221 14.57L4.72221 15.41L5.42221 16.62L6.69221 16.11L7.75221 15.68L8.66221 16.38C9.06221 16.68 9.46221 16.91 9.89221 17.09L10.9522 17.52L11.1122 18.65L11.3022 20H12.7022L12.9022 18.65L13.0622 17.52L14.1222 17.09C14.5322 16.92 14.9422 16.68 15.3722 16.36L16.2722 15.68L17.3122 16.1L18.5822 16.61L19.2822 15.4L18.2022 14.56L17.3122 13.86L17.4522 12.73C17.4822 12.43 17.5022 12.21 17.5022 12ZM12.0022 8C9.79221 8 8.00221 9.79 8.00221 12C8.00221 14.21 9.79221 16 12.0022 16C14.2122 16 16.0022 14.21 16.0022 12C16.0022 9.79 14.2122 8 12.0022 8ZM10.0022 12C10.0022 13.1 10.9022 14 12.0022 14C13.1022 14 14.0022 13.1 14.0022 12C14.0022 10.9 13.1022 10 12.0022 10C10.9022 10 10.0022 10.9 10.0022 12Z"
+                                fill="#7F8FA4" />
+                        </svg>
+                    </button>
+                </div>
+            </section>
+            <!-- Main content -->
+            <section class="content content-cal">
+                <!-- Small boxes (Stat box) -->
+                <div class="row" id="dashboard-widgetarea">
+                    <div class="col-lg-3 col-xs-6">
+                        <!-- small box -->
+                        <div class="small-box bg-green">
+                            <div class="inner">
+                                <p>Community Directory</p>
+                                <h3>1,200</h3>
+                            </div>
+                            <div class="icon">
+                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.3">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M5.20837 14.5834L25 4.16669L44.7917 14.5834V18.75H5.20837V14.5834ZM25.0001 8.87503L35.8543 14.5834H14.1459L25.0001 8.87503ZM10.4167 22.9167H14.5834V37.5H10.4167V22.9167ZM22.9167 37.5V22.9167H27.0834V37.5H22.9167ZM44.7917 45.8334V41.6667H5.20837V45.8334H44.7917ZM35.4167 22.9167H39.5834V37.5H35.4167V22.9167Z"
+                                            fill="white" />
+                                    </g>
+                                </svg>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-xs-6">
+                        <!-- small box -->
+                        <div class="small-box bg-aqua">
+                            <div class="inner">
+                                <p>Facilities</p>
+                                <h3>21</h3>
+                            </div>
+                            <div class="icon">
+                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.3">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M25 14.5833H45.8333V43.75H4.16663V6.25H25V14.5833ZM8.33329 39.5833H12.5V35.4167H8.33329V39.5833ZM12.5 31.25H8.33329V27.0833H12.5V31.25ZM8.33329 22.9167H12.5V18.75H8.33329V22.9167ZM12.5 14.5833H8.33329V10.4167H12.5V14.5833ZM16.6666 39.5833H20.8333V35.4167H16.6666V39.5833ZM20.8333 31.25H16.6666V27.0833H20.8333V31.25ZM16.6666 22.9167H20.8333V18.75H16.6666V22.9167ZM20.8333 14.5833H16.6666V10.4167H20.8333V14.5833ZM25 39.5833H41.6666V18.75H25V22.9167H29.1666V27.0833H25V31.25H29.1666V35.4167H25V39.5833ZM37.5 22.9167H33.3333V27.0833H37.5V22.9167ZM33.3333 31.25H37.5V35.4167H33.3333V31.25Z"
+                                            fill="white" />
+                                    </g>
+                                </svg>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-xs-6">
+                        <!-- small box -->
+                        <div class="small-box bg-purple">
+                            <div class="inner">
+                                <p>Pass Inventory</p>
+                                <h3>341</h3>
+                            </div>
+                            <div class="icon">
+                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.3">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M39.5833 6.25H10.4167C8.10417 6.25 6.25 8.125 6.25 10.4167V39.5833C6.25 41.875 8.10417 43.75 10.4167 43.75H39.5833C41.875 43.75 43.75 41.875 43.75 39.5833V10.4167C43.75 8.125 41.875 6.25 39.5833 6.25ZM31.25 18.75C31.25 22.1875 28.4375 25 25 25C21.5625 25 18.75 22.1875 18.75 18.75C18.75 15.3125 21.5625 12.5 25 12.5C28.4375 12.5 31.25 15.3125 31.25 18.75ZM27.0833 18.75C27.0833 17.6042 26.1458 16.6667 25 16.6667C23.8542 16.6667 22.9167 17.6042 22.9167 18.75C22.9167 19.8958 23.8542 20.8333 25 20.8333C26.1458 20.8333 27.0833 19.8958 27.0833 18.75ZM37.5 34.5417C37.5 29.3333 29.2292 27.0833 25 27.0833C20.7708 27.0833 12.5 29.3333 12.5 34.5417V37.5H37.5V34.5417ZM25 31.25C22.3125 31.25 19.2083 32.2708 17.6666 33.3333H32.3333C30.7916 32.2708 27.6875 31.25 25 31.25ZM10.4167 39.5833H39.5833V10.4167H10.4167V39.5833Z"
+                                            fill="white" />
+                                    </g>
+                                </svg>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-xs-6">
+                        <!-- small box -->
+                        <div class="small-box bg-gray">
+                            <div class="inner">
+                                <p>Visitors Added Today</p>
+                                <h3>12</h3>
+                            </div>
+                            <div class="icon">
+                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.3">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M39.5833 8.33335H30.875C30 5.91669 27.7083 4.16669 25 4.16669C22.2917 4.16669 20 5.91669 19.125 8.33335H10.4167C8.125 8.33335 6.25 10.2084 6.25 12.5V41.6667C6.25 43.9584 8.125 45.8334 10.4167 45.8334H39.5833C41.875 45.8334 43.75 43.9584 43.75 41.6667V12.5C43.75 10.2084 41.875 8.33335 39.5833 8.33335ZM25 7.81252C25.4583 7.81252 25.8542 8.02085 26.1458 8.33335C26.3958 8.60419 26.5625 8.97919 26.5625 9.37502C26.5625 10.2292 25.8542 10.9375 25 10.9375C24.1458 10.9375 23.4375 10.2292 23.4375 9.37502C23.4375 8.97919 23.6042 8.60419 23.8542 8.33335C24.1458 8.02085 24.5417 7.81252 25 7.81252ZM10.4167 12.5V41.6667H39.5833V12.5H10.4167ZM25 14.5834C21.5625 14.5834 18.75 17.3959 18.75 20.8334C18.75 24.2709 21.5625 27.0834 25 27.0834C28.4375 27.0834 31.25 24.2709 31.25 20.8334C31.25 17.3959 28.4375 14.5834 25 14.5834ZM22.9167 20.8334C22.9167 21.9792 23.8542 22.9167 25 22.9167C26.1458 22.9167 27.0833 21.9792 27.0833 20.8334C27.0833 19.6875 26.1458 18.75 25 18.75C23.8542 18.75 22.9167 19.6875 22.9167 20.8334ZM12.5 36.3959V39.5834H37.5V36.3959C37.5 31.1875 29.2292 28.9375 25 28.9375C20.7708 28.9375 12.5 31.1667 12.5 36.3959ZM25.0001 33.0834C22.2709 33.0834 18.7501 34.25 17.3126 35.4167H32.6876C31.2709 34.25 27.7292 33.0834 25.0001 33.0834Z"
+                                            fill="white" />
+                                    </g>
+                                </svg>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.row -->
+                <!-- Main row -->
+                <div class="row">
+                    <!-- Left col -->
+                    <div class="col-lg-8">
+                        <div class="dash-body-each responsive-height">
+                            <div class="dash-head box-header">
+                                <p class="box-title">Credential Entries by Loction <span>( Today vs Yesterday )</span>
+                                </p>
+                            </div>
+                            <div class="dash-body">
+
+                                <div class="box-body chart-responsive">
+                                    <div class="pull-right chart-custom-legends">
+                                        <ul class="circle-dash-list">
+                                            <li>Today</li>
+                                            <li>Yesterday</li>
+                                        </ul>
+                                    </div>
+                                    <canvas id="bar-chart" width="750" height="260"></canvas>
+                                </div>
+
+                            </div>
+                            <!-- /.dash-body-each -->
+                        </div>
+                    </div>
+                    <!-- /.Left col -->
+
+                    <!-- right col -->
+                    <div class="col-lg-4">
+                        <div class="dash-body-each responsive-height pie-chart-home">
+                            <div class="dash-head box-header">
+                                <!-- <p>Passes Issued By Time Periods</p> -->
+                                <p class="box-title">Passes Issued By Time Periods</p>
+
+                                <div class="box-tools pull-right">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-default dropdown-toggle"
+                                            data-toggle="dropdown">
+                                            Yesterday
+                                            <i class="fa fa-angle-down"></i></button>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#">Today</a></li>
+                                            <li><a href="#">Yesterday</a></li>
+                                            <li><a href="#">Tomorrow</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dash-body">
+                                <canvas id="pieChart" height="190"></canvas>
+                                <div id="pieChart-legend" class="circle-dash-list"></div>
+                            </div>
+                        </div>
+                        <!-- /.dash-body-each -->
+                    </div>
+                    <!-- /.right col -->
+
+                    <!-- right col -->
+                    <div class="col-lg-12">
+                        <div class="dash-body-each">
+                            <div class="dash-head box-header">
+                                <p class="box-title">Visitor Analytics</p>
+
+                                <div class="box-tools pull-right multiple-btn-group">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-default" data-toggle="dropdown">
+                                            01/08/2019 to 01/08/2019</button>
+                                    </div>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-default" data-toggle="dropdown"
+                                            onclick="thisMonthData();">
+                                            Last 30 days</button>
+                                    </div>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-default" data-toggle="dropdown"
+                                            onclick="thisWeekData();">
+                                            This week</button>
+                                    </div>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-default dropdown-toggle"
+                                            data-toggle="dropdown">
+                                            Permanent Guests
+                                            <i class="fa fa-angle-down"></i></button>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li class="resetButton" onclick="resetChart();">All</li>
+                                            <li class="filtertemporaryButton" onclick="temporaryData();">Temporary
+                                                Guests
+                                            </li>
+                                            <li class="filterPermanentButton" onclick="permanentData();">Permanent
+                                                Guests
+                                            </li>
+                                            <li class="filterVendorButton" onclick="vendorData();">Vendors</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dash-body">
+                                <div class="box-body">
+                                    <div class="pull-right chart-custom-legends">
+                                        <ul class="circle-dash-list">
+                                            <li>Temporary Guests</li>
+                                            <li>Permanent Guests</li>
+                                            <li>Vendors</li>
+                                        </ul>
+                                    </div>
+                                    <div id="chartdiv"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.dash-body-each -->
+                    </div>
+                    <!-- /.right col -->
+
+
+            </section>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+    </div>
+    <!-- ./wrapper -->
+
+    <div class="modal fade" id="modal-default">
+        <div class="modal-dialog modal-lg modal-custom">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title text-center">Select 4 widget for the Dashboard</h4>
+                </div>
+                <div class="modal-body dashboard-widget">
+                    <!-- Small boxes (Stat box) -->
+                    <div class="row">
+                        <div class="custom-width">
+                            <input id="checkbox11" type="checkbox" class="tech" value="Community Directory" />
+                            <label for="checkbox11">
+                                <div class="col-lg-3 col-xs-6">
+                                    <!-- small box -->
+                                    <div class="small-box bg-green">
+                                        <div class="inner">
+                                            <p>Community Directory</p>
+                                            <h3>1,200</h3>
+                                        </div>
+                                        <div class="icon">
+                                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g opacity="0.3">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M5.20837 14.5834L25 4.16669L44.7917 14.5834V18.75H5.20837V14.5834ZM25.0001 8.87503L35.8543 14.5834H14.1459L25.0001 8.87503ZM10.4167 22.9167H14.5834V37.5H10.4167V22.9167ZM22.9167 37.5V22.9167H27.0834V37.5H22.9167ZM44.7917 45.8334V41.6667H5.20837V45.8334H44.7917ZM35.4167 22.9167H39.5834V37.5H35.4167V22.9167Z"
+                                                        fill="white" />
+                                                </g>
+                                            </svg>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="custom-width">
+
+                            <input id="checkbox12" type="checkbox" class="tech" value="Facilities" />
+                            <label for="checkbox12">
+                                <div class="col-lg-3 col-xs-6">
+                                    <!-- small box -->
+                                    <div class="small-box bg-aqua">
+                                        <div class="inner">
+                                            <p>Facilities</p>
+                                            <h3>21</h3>
+                                        </div>
+                                        <div class="icon">
+                                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g opacity="0.3">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M25 14.5833H45.8333V43.75H4.16663V6.25H25V14.5833ZM8.33329 39.5833H12.5V35.4167H8.33329V39.5833ZM12.5 31.25H8.33329V27.0833H12.5V31.25ZM8.33329 22.9167H12.5V18.75H8.33329V22.9167ZM12.5 14.5833H8.33329V10.4167H12.5V14.5833ZM16.6666 39.5833H20.8333V35.4167H16.6666V39.5833ZM20.8333 31.25H16.6666V27.0833H20.8333V31.25ZM16.6666 22.9167H20.8333V18.75H16.6666V22.9167ZM20.8333 14.5833H16.6666V10.4167H20.8333V14.5833ZM25 39.5833H41.6666V18.75H25V22.9167H29.1666V27.0833H25V31.25H29.1666V35.4167H25V39.5833ZM37.5 22.9167H33.3333V27.0833H37.5V22.9167ZM33.3333 31.25H37.5V35.4167H33.3333V31.25Z"
+                                                        fill="white" />
+                                                </g>
+                                            </svg>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="custom-width">
+                            <input id="checkbox13" type="checkbox" class="tech" value="Pass Inventory" />
+                            <label for="checkbox13">
+                                <div class="col-lg-3 col-xs-6">
+                                    <!-- small box -->
+                                    <div class="small-box bg-purple">
+                                        <div class="inner">
+                                            <p>Pass Inventory</p>
+                                            <h3>341</h3>
+                                        </div>
+                                        <div class="icon">
+                                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g opacity="0.3">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M39.5833 6.25H10.4167C8.10417 6.25 6.25 8.125 6.25 10.4167V39.5833C6.25 41.875 8.10417 43.75 10.4167 43.75H39.5833C41.875 43.75 43.75 41.875 43.75 39.5833V10.4167C43.75 8.125 41.875 6.25 39.5833 6.25ZM31.25 18.75C31.25 22.1875 28.4375 25 25 25C21.5625 25 18.75 22.1875 18.75 18.75C18.75 15.3125 21.5625 12.5 25 12.5C28.4375 12.5 31.25 15.3125 31.25 18.75ZM27.0833 18.75C27.0833 17.6042 26.1458 16.6667 25 16.6667C23.8542 16.6667 22.9167 17.6042 22.9167 18.75C22.9167 19.8958 23.8542 20.8333 25 20.8333C26.1458 20.8333 27.0833 19.8958 27.0833 18.75ZM37.5 34.5417C37.5 29.3333 29.2292 27.0833 25 27.0833C20.7708 27.0833 12.5 29.3333 12.5 34.5417V37.5H37.5V34.5417ZM25 31.25C22.3125 31.25 19.2083 32.2708 17.6666 33.3333H32.3333C30.7916 32.2708 27.6875 31.25 25 31.25ZM10.4167 39.5833H39.5833V10.4167H10.4167V39.5833Z"
+                                                        fill="white" />
+                                                </g>
+                                            </svg>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="custom-width">
+                            <input id="checkbox14" type="checkbox" class="tech" value="Visitors Added Today" />
+                            <label for="checkbox14">
+                                <div class="col-lg-3 col-xs-6">
+                                    <!-- small box -->
+                                    <div class="small-box bg-gray">
+                                        <div class="inner">
+                                            <p>Visitors Added Today</p>
+                                            <h3>12</h3>
+                                        </div>
+                                        <div class="icon">
+                                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g opacity="0.3">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M39.5833 8.33335H30.875C30 5.91669 27.7083 4.16669 25 4.16669C22.2917 4.16669 20 5.91669 19.125 8.33335H10.4167C8.125 8.33335 6.25 10.2084 6.25 12.5V41.6667C6.25 43.9584 8.125 45.8334 10.4167 45.8334H39.5833C41.875 45.8334 43.75 43.9584 43.75 41.6667V12.5C43.75 10.2084 41.875 8.33335 39.5833 8.33335ZM25 7.81252C25.4583 7.81252 25.8542 8.02085 26.1458 8.33335C26.3958 8.60419 26.5625 8.97919 26.5625 9.37502C26.5625 10.2292 25.8542 10.9375 25 10.9375C24.1458 10.9375 23.4375 10.2292 23.4375 9.37502C23.4375 8.97919 23.6042 8.60419 23.8542 8.33335C24.1458 8.02085 24.5417 7.81252 25 7.81252ZM10.4167 12.5V41.6667H39.5833V12.5H10.4167ZM25 14.5834C21.5625 14.5834 18.75 17.3959 18.75 20.8334C18.75 24.2709 21.5625 27.0834 25 27.0834C28.4375 27.0834 31.25 24.2709 31.25 20.8334C31.25 17.3959 28.4375 14.5834 25 14.5834ZM22.9167 20.8334C22.9167 21.9792 23.8542 22.9167 25 22.9167C26.1458 22.9167 27.0833 21.9792 27.0833 20.8334C27.0833 19.6875 26.1458 18.75 25 18.75C23.8542 18.75 22.9167 19.6875 22.9167 20.8334ZM12.5 36.3959V39.5834H37.5V36.3959C37.5 31.1875 29.2292 28.9375 25 28.9375C20.7708 28.9375 12.5 31.1667 12.5 36.3959ZM25.0001 33.0834C22.2709 33.0834 18.7501 34.25 17.3126 35.4167H32.6876C31.2709 34.25 27.7292 33.0834 25.0001 33.0834Z"
+                                                        fill="white" />
+                                                </g>
+                                            </svg>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="custom-width">
+                            <input id="checkbox15" type="checkbox" class="tech" value="Staff Directory" />
+                            <label for="checkbox15">
+                                <div class="col-lg-3 col-xs-6">
+                                    <!-- small box -->
+                                    <div class="small-box bg-darkgrey-gradient">
+                                        <div class="inner">
+                                            <p>Staff Directory</p>
+                                            <h3>1,200</h3>
+                                        </div>
+                                        <div class="icon">
+                                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g opacity="0.3">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M5.20837 14.5834L25 4.16669L44.7917 14.5834V18.75H5.20837V14.5834ZM25.0001 8.87503L35.8543 14.5834H14.1459L25.0001 8.87503ZM10.4167 22.9167H14.5834V37.5H10.4167V22.9167ZM22.9167 37.5V22.9167H27.0834V37.5H22.9167ZM44.7917 45.8334V41.6667H5.20837V45.8334H44.7917ZM35.4167 22.9167H39.5834V37.5H35.4167V22.9167Z"
+                                                        fill="white" />
+                                                </g>
+                                            </svg>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="custom-width">
+                            <input id="checkbox16" type="checkbox" class="tech" value="Credential Activity" />
+                            <label for="checkbox16">
+                                <div class="col-lg-3 col-xs-6">
+                                    <!-- small box -->
+                                    <div class="small-box bg-skyblue-gradient">
+                                        <div class="inner">
+                                            <p>Credential Activity</p>
+                                            <h3>21</h3>
+                                        </div>
+                                        <div class="icon">
+                                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g opacity="0.3">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M18.75 25C22.7708 25 26.0416 21.7292 26.0416 17.7084C26.0416 13.6875 22.7708 10.4167 18.75 10.4167C14.7291 10.4167 11.4583 13.6875 11.4583 17.7084C11.4583 21.7292 14.7291 25 18.75 25ZM18.75 14.5834C20.4791 14.5834 21.875 15.9792 21.875 17.7084C21.875 19.4375 20.4791 20.8334 18.75 20.8334C17.0208 20.8334 15.625 19.4375 15.625 17.7084C15.625 15.9792 17.0208 14.5834 18.75 14.5834ZM9.93746 35.4167H18.8541C18.7916 35.75 18.75 36.1042 18.75 36.4584V39.5834H4.16663V36.4584C4.16663 31.6042 13.875 29.1667 18.75 29.1667C19.9166 29.1667 21.3541 29.3125 22.875 29.5834C21.3958 30.5834 20.1666 31.8334 19.4583 33.3542C19.3438 33.3542 19.224 33.349 19.1043 33.3438L19.1041 33.3438C18.9843 33.3386 18.8645 33.3334 18.75 33.3334C15.5625 33.3334 12 34.375 9.93746 35.4167ZM34.375 30.2084C30.5416 30.2084 22.9166 32.3125 22.9166 36.4584V39.5834H45.8333V36.4584C45.8333 32.3125 38.2083 30.2084 34.375 30.2084ZM39.5833 21.875C39.5833 23.8334 38.4791 25.5209 36.8958 26.4167C36.1458 26.8334 35.2916 27.0834 34.375 27.0834C33.4583 27.0834 32.6041 26.8334 31.8541 26.4167C30.2708 25.5209 29.1666 23.8334 29.1666 21.875C29.1666 19 31.5 16.6667 34.375 16.6667C37.25 16.6667 39.5833 19 39.5833 21.875Z"
+                                                        fill="white" />
+                                                </g>
+                                            </svg>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="custom-width">
+                            <input id="checkbox17" type="checkbox" class="tech" value="Unassigned Credentials" />
+                            <label for="checkbox17">
+                                <div class="col-lg-3 col-xs-6">
+                                    <!-- small box -->
+                                    <div class="small-box bg-lightgrey-gradient">
+                                        <div class="inner">
+                                            <p>Unassigned Credentials</p>
+                                            <h3>341</h3>
+                                        </div>
+                                        <div class="icon">
+                                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g opacity="0.3">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M25 8.33331C20.3959 8.33331 16.6667 12.0625 16.6667 16.6666C16.6667 21.2708 20.3959 25 25 25C29.6042 25 33.3334 21.2708 33.3334 16.6666C33.3334 12.0625 29.6042 8.33331 25 8.33331ZM29.1667 16.6666C29.1667 14.375 27.2917 12.5 25 12.5C22.7084 12.5 20.8334 14.375 20.8334 16.6666C20.8334 18.9583 22.7084 20.8333 25 20.8333C27.2917 20.8333 29.1667 18.9583 29.1667 16.6666ZM37.5 35.4166C37.0834 33.9375 30.625 31.25 25 31.25C19.375 31.25 12.9167 33.9375 12.5 35.4375V37.5H37.5V35.4166ZM8.33337 35.4166C8.33337 29.875 19.4375 27.0833 25 27.0833C30.5625 27.0833 41.6667 29.875 41.6667 35.4166V41.6666H8.33337V35.4166Z"
+                                                        fill="white" />
+                                                </g>
+                                            </svg>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="custom-width">
+                            <input id="checkbox18" type="checkbox" class="tech" value="Today’s Visitors" />
+                            <label for="checkbox18">
+                                <div class="col-lg-3 col-xs-6">
+                                    <!-- small box -->
+                                    <div class="small-box bg-lightpurple-gradient">
+                                        <div class="inner">
+                                            <p>Today’s Visitors</p>
+                                            <h3>12</h3>
+                                        </div>
+                                        <div class="icon">
+                                            <svg width="44" height="44" viewBox="0 0 44 44" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g opacity="0.3">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M27.17 7.33335H34.8333C36.85 7.33335 38.5 8.98335 38.5 11V36.6667C38.5 38.6834 36.85 40.3334 34.8333 40.3334H9.16667C8.91 40.3334 8.67167 40.315 8.43333 40.2784C7.71833 40.1317 7.07667 39.765 6.58167 39.27C6.25167 38.9217 5.97667 38.5367 5.79333 38.0967C5.61 37.6567 5.5 37.1617 5.5 36.6667V11C5.5 10.4867 5.61 10.01 5.79333 9.58835C5.97667 9.14835 6.25167 8.74502 6.58167 8.41502C7.07667 7.92002 7.71833 7.55335 8.43333 7.40669C8.67167 7.35169 8.91 7.33335 9.16667 7.33335H16.83C17.6 5.20669 19.6167 3.66669 22 3.66669C24.3833 3.66669 26.4 5.20669 27.17 7.33335ZM12.8333 14.6667H31.1667V18.3334H12.8333V14.6667ZM31.1667 22H12.8333V25.6667H31.1667V22ZM25.6667 29.3333H12.8333V33H25.6667V29.3333ZM22 6.87502C22.7517 6.87502 23.375 7.49835 23.375 8.25002C23.375 9.00169 22.7517 9.62502 22 9.62502C21.2483 9.62502 20.625 9.00169 20.625 8.25002C20.625 7.49835 21.2483 6.87502 22 6.87502ZM9.16666 36.6667H34.8333V11H9.16666V36.6667Z"
+                                                        fill="white" />
+                                                </g>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="custom-width">
+                            <input id="checkbox19" type="checkbox" class="tech" value="Member Directory" />
+                            <label for="checkbox19">
+                                <div class="col-lg-3 col-xs-6">
+                                    <!-- small box -->
+                                    <div class="small-box bg-lightblue-gradient">
+                                        <div class="inner">
+                                            <p>Member Directory</p>
+                                            <h3>1,200</h3>
+                                        </div>
+                                        <div class="icon">
+                                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g opacity="0.3">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M18.75 25C22.7708 25 26.0416 21.7292 26.0416 17.7084C26.0416 13.6875 22.7708 10.4167 18.75 10.4167C14.7291 10.4167 11.4583 13.6875 11.4583 17.7084C11.4583 21.7292 14.7291 25 18.75 25ZM4.16663 35.9375C4.16663 31.0834 13.875 28.6459 18.75 28.6459C23.625 28.6459 33.3333 31.0834 33.3333 35.9375V39.5834H4.16663V35.9375ZM18.7499 32.8125C15.0207 32.8125 10.7916 34.2084 9.04158 35.4167H28.4582C26.7082 34.2084 22.4791 32.8125 18.7499 32.8125ZM21.875 17.7084C21.875 15.9792 20.4791 14.5834 18.75 14.5834C17.0208 14.5834 15.625 15.9792 15.625 17.7084C15.625 19.4375 17.0208 20.8334 18.75 20.8334C20.4791 20.8334 21.875 19.4375 21.875 17.7084ZM33.4167 28.7709C35.8333 30.5209 37.5 32.8542 37.5 35.9375V39.5834H45.8333V35.9375C45.8333 31.7292 38.5417 29.3334 33.4167 28.7709ZM38.5416 17.7084C38.5416 21.7292 35.2708 25 31.25 25C30.125 25 29.0833 24.7292 28.125 24.2709C29.4375 22.4167 30.2083 20.1459 30.2083 17.7084C30.2083 15.2709 29.4375 13 28.125 11.1459C29.0833 10.6875 30.125 10.4167 31.25 10.4167C35.2708 10.4167 38.5416 13.6875 38.5416 17.7084Z"
+                                                        fill="white" />
+                                                </g>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="custom-width">
+                            <input id="checkbox20" type="checkbox" class="tech" value="Incidents" />
+                            <label for="checkbox20">
+                                <div class="col-lg-3 col-xs-6">
+                                    <!-- small box -->
+                                    <div class="small-box bg-lightred-gradient">
+                                        <div class="inner">
+                                            <p>Incidents</p>
+                                            <h3>21</h3>
+                                        </div>
+                                        <div class="icon">
+                                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g opacity="0.3">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M2 43L24 5L46 43H2ZM39.0602 39L24.0002 12.98L8.94023 39H39.0602ZM26 33H22V37H26V33ZM22 21H26V29H22V21Z"
+                                                        fill="white" />
+                                                </g>
+                                            </svg>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="custom-width">
+                            <input id="checkbox21" type="checkbox" class="tech" value="Device Credits" />
+                            <label for="checkbox21">
+                                <div class="col-lg-3 col-xs-6">
+                                    <!-- small box -->
+                                    <div class="small-box bg-lightyellow-gradient">
+                                        <div class="inner">
+                                            <p>Device Credits</p>
+                                            <h3>341</h3>
+                                        </div>
+                                        <div class="icon">
+                                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g opacity="0.3">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M25.0001 4.16669C13.5001 4.16669 4.16675 13.5 4.16675 25C4.16675 36.5 13.5001 45.8334 25.0001 45.8334C36.5001 45.8334 45.8334 36.5 45.8334 25C45.8334 13.5 36.5001 4.16669 25.0001 4.16669ZM25.0001 41.6667C15.8126 41.6667 8.33342 34.1875 8.33342 25C8.33342 15.8125 15.8126 8.33335 25.0001 8.33335C34.1876 8.33335 41.6667 15.8125 41.6667 25C41.6667 34.1875 34.1876 41.6667 25.0001 41.6667ZM20.771 19.7292C20.771 21.25 21.9585 22.2709 25.646 23.2084C29.3126 24.1667 33.2501 25.75 33.271 30.3334C33.2501 33.6875 30.7501 35.5 27.5835 36.1042V39.5834H22.7085V36.0417C19.5835 35.3959 16.9585 33.3959 16.7501 29.8542H20.3335C20.521 31.7709 21.8335 33.2709 25.1668 33.2709C28.7293 33.2709 29.5418 31.4792 29.5418 30.375C29.5418 28.875 28.7293 27.4375 24.6668 26.4792C20.146 25.3959 17.0418 23.5209 17.0418 19.7917C17.0418 16.6459 19.5626 14.6042 22.7085 13.9375V10.4167H27.5626V13.9792C30.9376 14.8125 32.646 17.375 32.7501 20.1667H29.1876C29.1043 18.125 28.021 16.75 25.146 16.75C22.4168 16.75 20.771 17.9792 20.771 19.7292Z"
+                                                        fill="white" />
+                                                </g>
+                                            </svg>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="custom-width">
+                            <input id="checkbox22" type="checkbox" class="tech" value="Today’s Events" />
+                            <label for="checkbox22">
+                                <div class="col-lg-3 col-xs-6">
+                                    <!-- small box -->
+                                    <div class="small-box bg-lightgreen-gradient">
+                                        <div class="inner">
+                                            <p>Today’s Events</p>
+                                            <h3>12</h3>
+                                        </div>
+                                        <div class="icon">
+                                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g opacity="0.3">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M33.3333 5.00002H31.6666V1.66669H28.3333V5.00002H11.6666V1.66669H8.33325V5.00002H6.66659C4.83325 5.00002 3.33325 6.50002 3.33325 8.33335V35C3.33325 36.8334 4.83325 38.3334 6.66659 38.3334H33.3333C35.1666 38.3334 36.6666 36.8334 36.6666 35V8.33335C36.6666 6.50002 35.1666 5.00002 33.3333 5.00002ZM33.3333 35H6.66659V16.6667H33.3333V35ZM6.66659 13.3334H33.3333V8.33335H6.66659V13.3334Z"
+                                                        fill="white" />
+                                                </g>
+                                            </svg>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <!-- /.row -->
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+
+
+    <!-- jQuery 3 -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap 3.3.7 -->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- Morris.js charts -->
+    <script src="bower_components/raphael/raphael.min.js"></script>
+    <script src="bower_components/morris.js/morris.min.js"></script>
+
+    <script src="bower_components/Flot/jquery.flot.js"></script>
+    <!-- FLOT RESIZE PLUGIN - allows the chart to redraw when the window is resized -->
+    <script src="bower_components/Flot/jquery.flot.resize.js"></script>
+    <!-- FLOT PIE PLUGIN - also used to draw donut charts -->
+    <script src="bower_components/Flot/jquery.flot.pie.js"></script>
+    <!-- FLOT CATEGORIES PLUGIN - Used to draw bar charts -->
+    <script src="bower_components/Flot/jquery.flot.categories.js"></script>
+
+    <!-- FastClick -->
+    <script src="bower_components/fastclick/lib/fastclick.js"></script>
+    <!-- AdminLTE App -->
+    <script src="dist/js/adminlte.min.js"></script>
+    <!-- Sparkline -->
+    <script src="bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+    <!-- jvectormap  -->
+    <!-- <script src="plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script> -->
+    <!-- <script src="plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script> -->
+    <!-- SlimScroll -->
+    <script src="bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+    <!-- ChartJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.0/Chart.min.js"></script>
+    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+    <!-- <script src="dist/js/pages/dashboard2.js"></script> -->
+    <!-- AdminLTE for demo purposes -->
+    <script src="dist/js/demo.js"></script>
+
+    <!-- Smoothed Line Chart -->
+    <!-- source: https://codepen.io/Ashish9342/pen/dJyyKo -->
+    <!-- source: https://codepen.io/shamim539/pen/WNNeyLz -->
+    <script src="https://www.amcharts.com/lib/4/core.js"></script>
+    <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+
+
+    <script src="custom.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>iSuite360 | Dashboard</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.7 -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.min.css">
+    <!-- jvectormap -->
+    <link rel="stylesheet" href="bower_components/jvectormap/jquery-jvectormap.css">
+
+    <!-- Material Design Icons -->
+    <link
+        href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.15.4/dist/bootstrap-table.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+            folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+    <link rel="stylesheet" href="custom.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    <!-- Google Font -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper">
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                <span class="logo-mini"><img src="source/logo-small.png" alt="Logo Sm"></span>
+                <!-- logo for regular state and mobile devices -->
+                <span class="logo-lg"><img src="source/logo.png" alt="Logo Lg"></span>
+            </a>
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+                <!-- Navbar Right Menu -->
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        <!-- Control Sidebar Toggle Button -->
+                        <li>
+                            <a href="#" data-toggle="control-sidebar">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M19.5022 12C19.5022 12.34 19.4722 12.66 19.4322 12.98L21.5422 14.63C21.7322 14.78 21.7822 15.05 21.6622 15.27L19.6622 18.73C19.5722 18.89 19.4022 18.98 19.2322 18.98C19.1722 18.98 19.1122 18.97 19.0522 18.95L16.5622 17.95C16.0422 18.34 15.4822 18.68 14.8722 18.93L14.4922 21.58C14.4622 21.82 14.2522 22 14.0022 22H10.0022C9.75221 22 9.54221 21.82 9.51221 21.58L9.13221 18.93C8.52221 18.68 7.96221 18.35 7.44221 17.95L4.95221 18.95C4.90221 18.97 4.84221 18.98 4.78221 18.98C4.60221 18.98 4.43221 18.89 4.34221 18.73L2.34221 15.27C2.22221 15.05 2.27221 14.78 2.46221 14.63L4.57221 12.98C4.53221 12.66 4.50221 12.33 4.50221 12C4.50221 11.67 4.53221 11.34 4.57221 11.02L2.46221 9.37C2.27221 9.22 2.21221 8.95 2.34221 8.73L4.34221 5.27C4.43221 5.11 4.60221 5.02 4.77221 5.02C4.83221 5.02 4.89221 5.03 4.95221 5.05L7.44221 6.05C7.96221 5.66 8.52221 5.32 9.13221 5.07L9.51221 2.42C9.54221 2.18 9.75221 2 10.0022 2H14.0022C14.2522 2 14.4622 2.18 14.4922 2.42L14.8722 5.07C15.4822 5.32 16.0422 5.65 16.5622 6.05L19.0522 5.05C19.1022 5.03 19.1622 5.02 19.2222 5.02C19.4022 5.02 19.5722 5.11 19.6622 5.27L21.6622 8.73C21.7822 8.95 21.7322 9.22 21.5422 9.37L19.4322 11.02C19.4722 11.34 19.5022 11.66 19.5022 12ZM17.5022 12C17.5022 11.79 17.4922 11.58 17.4522 11.27L17.3122 10.14L18.2022 9.44L19.2722 8.59L18.5722 7.38L17.3022 7.89L16.2422 8.32L15.3322 7.62C14.9322 7.32 14.5322 7.09 14.1022 6.91L13.0422 6.48L12.8822 5.35L12.6922 4H11.3022L11.1022 5.35L10.9422 6.48L9.88221 6.91C9.47221 7.08 9.06221 7.32 8.63221 7.64L7.73221 8.32L6.69221 7.9L5.42221 7.39L4.72221 8.6L5.80221 9.44L6.69221 10.14L6.55221 11.27C6.52221 11.57 6.50221 11.8 6.50221 12C6.50221 12.2 6.52221 12.43 6.55221 12.74L6.69221 13.87L5.80221 14.57L4.72221 15.41L5.42221 16.62L6.69221 16.11L7.75221 15.68L8.66221 16.38C9.06221 16.68 9.46221 16.91 9.89221 17.09L10.9522 17.52L11.1122 18.65L11.3022 20H12.7022L12.9022 18.65L13.0622 17.52L14.1222 17.09C14.5322 16.92 14.9422 16.68 15.3722 16.36L16.2722 15.68L17.3122 16.1L18.5822 16.61L19.2822 15.4L18.2022 14.56L17.3122 13.86L17.4522 12.73C17.4822 12.43 17.5022 12.21 17.5022 12ZM12.0022 8C9.79221 8 8.00221 9.79 8.00221 12C8.00221 14.21 9.79221 16 12.0022 16C14.2122 16 16.0022 14.21 16.0022 12C16.0022 9.79 14.2122 8 12.0022 8ZM10.0022 12C10.0022 13.1 10.9022 14 12.0022 14C13.1022 14 14.0022 13.1 14.0022 12C14.0022 10.9 13.1022 10 12.0022 10C10.9022 10 10.0022 10.9 10.0022 12Z"
+                                        fill="#7F8FA4" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="dropdown language-menu">
+                            <!-- TODO language -->
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="source/eng.png"
+                                    alt="Lang"> English <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#"><img src="source/spanish.png" alt="Lang"> Spanish</a></li>
+                                <li><a href="#"><img src="source/french.png" alt="Lang"> French</a></li>
+                            </ul>
+                        </li>
+                        <!-- Notifications: style can be found in dropdown.less -->
+                        <li class="dropdown notifications-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M18 15.75V10.75C18 7.68 16.37 5.11 13.5 4.43V3.75C13.5 2.92 12.83 2.25 12 2.25C11.17 2.25 10.5 2.92 10.5 3.75V4.43C7.64 5.11 6 7.67 6 10.75V15.75L4 17.75V18.75H20V17.75L18 15.75ZM12 21.75C13.1 21.75 14 20.85 14 19.75H10C10 20.85 10.9 21.75 12 21.75ZM8 16.75H16V10.75C16 8.27 14.49 6.25 12 6.25C9.51 6.25 8 8.27 8 10.75V16.75Z"
+                                        fill="#7F8FA4" />
+                                </svg>
+
+                                <span class="label label-warning">3</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="header">You have 10 notifications</li>
+                                <li>
+                                    <!-- inner menu: contains the actual data -->
+                                    <ul class="menu">
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-warning text-yellow"></i> Very long description here
+                                                that may not fit into the
+                                                page and may cause design problems
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-users text-red"></i> 5 new members joined
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-shopping-cart text-green"></i> 25 sales made
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-user text-red"></i> You changed your username
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="footer"><a href="#">View all</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- User Account: style can be found in dropdown.less -->
+                        <li class="dropdown user user-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                                <span class="hidden-xs">Sierra Ferguson <small>Aadmin Officer</small></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <!-- User image -->
+                                <li class="user-header">
+                                    <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                                    <p>
+                                        Sierra Ferguson - <small>Admin Officer</small>
+                                        <small>Member since Nov. 2012</small>
+                                    </p>
+                                </li>
+                                <!-- Menu Body -->
+                                <li class="user-body">
+                                    <div class="row">
+                                        <div class="col-xs-4 text-center">
+                                            <a href="#">Followers</a>
+                                        </div>
+                                        <div class="col-xs-4 text-center">
+                                            <a href="#">Sales</a>
+                                        </div>
+                                        <div class="col-xs-4 text-center">
+                                            <a href="#">Friends</a>
+                                        </div>
+                                    </div>
+                                    <!-- /.row -->
+                                </li>
+                                <!-- Menu Footer-->
+                                <li class="user-footer">
+                                    <div class="pull-left">
+                                        <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                    </div>
+                                    <div class="pull-right">
+                                        <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+                <!-- sidebar menu: : style can be found in sidebar.less -->
+                <ul class="sidebar-menu" data-widget="tree">
+                    <li>
+                        <a href="index.html">
+                            <img src="source/icons/leftbar/dashboard.svg" class="not-hover" alt="Dashboard">
+                            <img src="source/icons/leftbar/dashboard_hover.svg" class="when-hover" alt="Dashboard">
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="treeview active">
+                        <a href="#">
+                            <img src="source/icons/leftbar/org.svg" class="not-hover" alt="Icon">
+                            <img src="source/icons/leftbar/org_hover.svg" class="when-hover" alt="Icon">
+                            <span>Organization</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-right pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="#"><img src="source/icons/leftbar/property.svg" alt="Icon"> Properties</a></li>
+                            <li class="active"><a href="residents.html"><img src="source/icons/leftbar/residents.svg"
+                                        alt="Icon"> Residents</a></li>
+                            <li><a href="#"><img src="source/icons/leftbar/visitors.svg" alt="Icon"> Visitors</a></li>
+                            <li><a href="#"><img src="source/icons/leftbar/visitors.svg" alt="Icon"> Guards</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <img src="source/icons/leftbar/cususer.svg" class="not-hover" alt="Icon">
+                            <img src="source/icons/leftbar/cususer_hover.svg" class="when-hover" alt="Icon">
+                            <span>Custom Users</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-right pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="#"><img src="source/icons/leftbar/cususer.svg" alt="Icon"> Users</a></li>
+                            <li><a href="#"><img src="source/icons/leftbar/userrole.svg" alt="Icon"> Roles</a></li>
+                            <li><a href="#"><img src="source/icons/leftbar/permission.svg" alt="Icon"> Permissions</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <img src="source/icons/leftbar/equ.svg" class="not-hover" alt="Icon">
+                            <img src="source/icons/leftbar/equ_hover.svg" class="when-hover" alt="Icon">
+                            <span>Equipment</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-right pull-right"></i>
+                            </span>
+                        </a>
+                        <!--  <ul class="treeview-menu">
+                                <li><a href="#"><i class="fa fa-circle-o"></i> Equipment 1</a></li>
+                                <li><a href="#"><i class="fa fa-circle-o"></i> Equipment 2</a></li>
+                                <li><a href="#"><i class="fa fa-circle-o"></i> Equipment 3</a></li>
+                                <li><a href="#"><i class="fa fa-circle-o"></i> Equipment 4</a></li>
+                            </ul> -->
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <img src="source/icons/leftbar/access.svg" class="not-hover" alt="Icon">
+                            <img src="source/icons/leftbar/access_hover.svg" class="when-hover" alt="Icon">
+                            <span>Acess</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-right pull-right"></i>
+                            </span>
+                        </a>
+                        <!--   <ul class="treeview-menu">
+                                <li><a href="#"><i class="fa fa-circle-o"></i> Acess 1</a></li>
+                                <li><a href="#"><i class="fa fa-circle-o"></i> Acess 2</a></li>
+                                <li><a href="#"><i class="fa fa-circle-o"></i> Acess 3</a></li>
+                                <li><a href="#"><i class="fa fa-circle-o"></i> Acess 4</a></li>
+                            </ul> -->
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <img src="source/icons/leftbar/facility.svg" class="not-hover" alt="Icon">
+                            <img src="source/icons/leftbar/facility_hover.svg" class="when-hover" alt="Icon">
+                            <span>Facilities</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-right pull-right"></i>
+                            </span>
+                        </a>
+                        <!-- <ul class="treeview-menu">
+                                <li><a href="#"><i class="fa fa-circle-o"></i> Facility 1</a></li>
+                                <li><a href="#"><i class="fa fa-circle-o"></i> Facility 2</a></li>
+                                <li><a href="#"><i class="fa fa-circle-o"></i> Facility 3</a></li>
+                                <li><a href="#"><i class="fa fa-circle-o"></i> Facility 4</a></li>
+                            </ul> -->
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <img src="source/icons/leftbar/incident.svg" class="not-hover" alt="Icon">
+                            <img src="source/icons/leftbar/incident_hover.svg" class="when-hover" alt="Icon">
+                            <span>Incident</span>
+                        </a>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <img src="source/icons/leftbar/reports.svg" class="not-hover" alt="Icon">
+                            <img src="source/icons/leftbar/reports_hover.svg" class="when-hover" alt="Icon">
+                            <span>Reports</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-right pull-right"></i>
+                            </span>
+                        </a>
+                        <!--  <ul class="treeview-menu">
+                                <li><a href="#"><i class="fa fa-circle-o"></i> Report 1</a></li>
+                                <li><a href="#"><i class="fa fa-circle-o"></i> Report 2</a></li>
+                                <li><a href="#"><i class="fa fa-circle-o"></i> Report 3</a></li>
+                                <li><a href="#"><i class="fa fa-circle-o"></i> Report 4</a></li>
+                            </ul> -->
+                    </li>
+
+
+
+
+
+
+                </ul>
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <ol class="breadcrumb">
+                    <li><a href="#">Organization</a></li>
+                    <li class="active">Residents</li>
+                </ol>
+                <h1>Residents Management
+                </h1>
+
+            </section>
+
+            <!-- Main content -->
+            <section class="content container-fluid">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- Custom Tabs -->
+                        <div class="nav-tabs-custom">
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a href="#completed_residents" data-toggle="tab">Completed
+                                        Residents</a></li>
+                                <li><a href="#pending_residents" data-toggle="tab">Pending Residents</a></li>
+                                <li><a href="#shared_residents" data-toggle="tab">Shared Residents</a></li>
+                                <li><a href="#previous_residents" data-toggle="tab">Previous Residents</a></li>
+
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="completed_residents">
+                                    <div id="toolbar">
+                                        <!-- Standard button -->
+                                        <button type="button" class="btn btn-default btn-lg button-custom">Upload
+                                            Excel</button>
+
+                                        <div class="dropdown-container advance-search">
+                                            <button id="advanceSearch" class="btn btn-default btn-lg button-custom dropdown-toggle"
+                                                type="button" data-toggle="dropdown" aria-haspopup="true"
+                                                aria-expanded="false"><i class="fa fa-sliders"></i> Advanced Search <i
+                                                    class="fa fa-angle-down"></i></button>
+                                            <div class="dropdown-menu dropdown-list">
+                                                <div class="search input-group">
+                                                    <input id="search_input" type="search" placeholder="Search states"
+                                                        class="dropdown-search search-input" />
+                                                </div>
+                                                <ul class="dropdown-column-list">
+
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <!-- <div class="dropdown-container advance-search">
+                                            <div class="dropdown">
+                                                <button class="btn btn-default" type="button" data-toggle="dropdown"
+                                                    aria-haspopup="true" aria-expanded="false"><i
+                                                        class="fa fa-sliders"></i> Advanced Search <i
+                                                        class="fa fa-angle-down"></i></button>
+                                                <div class="dropdown-menu" aria-labelledby="dLabel">
+                                                    <div class="dropdown-list">
+                                                        <input id="search_input" type="search"
+                                                            placeholder="Search states" class="dropdown-search" />
+                                                        <ul></ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="dropdown-button noselect">
+
+                                                <div class="dropdown-label button-custom"><i class="fa fa-sliders"></i>
+                                                    Advanced Search <i class="fa fa-angle-down"></i></div>
+
+                                            </div>
+                                            <div class="dropdown-list" style="display: none;">
+                                                <input id="search_input" type="search" placeholder="Search states"
+                                                    class="dropdown-search" />
+                                                <ul></ul>
+                                            </div>
+                                        </div> -->
+                                    </div>
+
+
+                                    <table id="table" data-locale="en-US" data-toolbar="#toolbar" data-search="true"
+                                        data-show-refresh="false" data-show-toggle="false" data-show-fullscreen="false"
+                                        data-show-columns="true" data-detail-view="false" data-show-export="false"
+                                        data-click-to-select="true" data-minimum-count-columns="2"
+                                        data-show-pagination-switch="false" data-pagination="true" data-id-field="id"
+                                        data-pagination-pre-text="Previous" data-pagination-next-text="Next"
+                                        data-page-list="[10, 25, 50, 100, all]" data-show-footer="false">
+                                        <thead>
+                                            <tr>
+                                                <th data-field="fname" data-sortable="true">First Name</th>
+                                                <th data-field="lname" data-sortable="true">Last Name</th>
+                                                <th data-field="type" data-sortable="true">Type</th>
+                                                <th data-field="phone" data-sortable="true">Phone</th>
+                                                <th data-field="unit" data-sortable="true">Unit</th>
+                                                <th data-field="community" data-sortable="true">Community</th>
+                                                <th data-field="address" data-sortable="true">Address</th>
+                                                <th data-field="city" data-sortable="true">City</th>
+                                                <th data-field="state" data-sortable="true">State</th>
+                                                <th data-field="zip" data-sortable="true">Zip</th>
+                                                <th data-field="zip" data-sortable="true" data-visible="false">Lease
+                                                    Start Date</th>
+                                                <th data-field="zip" data-sortable="true" data-visible="false">Lease End
+                                                    Date</th>
+                                                <th data-field="zip" data-sortable="true" data-visible="false">Date
+                                                    Purchased</th>
+                                                <th data-formatter="operateFormatter">
+                                                    Actions
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                                <!-- /.tab-pane -->
+                                <div class="tab-pane" id="pending_residents">
+                                    The European languages are members of the same family. Their separate existence is a
+                                    myth.
+                                    For science, music, sport, etc, Europe uses the same vocabulary. The languages only
+                                    differ
+                                    in their grammar, their pronunciation and their most common words. Everyone realizes
+                                    why a
+                                    new common language would be desirable: one could refuse to pay expensive
+                                    translators. To
+                                    achieve this, it would be necessary to have uniform grammar, pronunciation and more
+                                    common
+                                    words. If several languages coalesce, the grammar of the resulting language is more
+                                    simple
+                                    and regular than that of the individual languages.
+                                </div>
+                                <!-- /.tab-pane -->
+                                <div class="tab-pane" id="shared_residents">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                    when an unknown printer took a galley of type and scrambled it to make a type
+                                    specimen book.
+                                    It has survived not only five centuries, but also the leap into electronic
+                                    typesetting,
+                                    remaining essentially unchanged. It was popularised in the 1960s with the release of
+                                    Letraset
+                                    sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                                    software
+                                    like Aldus PageMaker including versions of Lorem Ipsum.
+                                </div>
+                                <!-- /.tab-pane -->
+                                <div class="tab-pane" id="previous_residents">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                    when an unknown printer took a galley of type and scrambled it to make a type
+                                    specimen book.
+                                    It has survived not only five centuries, but also the leap into electronic
+                                    typesetting,
+                                    remaining essentially unchanged. It was popularised in the 1960s with the release of
+                                    Letraset
+                                    sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                                    software
+                                    like Aldus PageMaker including versions of Lorem Ipsum.
+                                </div>
+                                <!-- /.tab-pane -->
+                            </div>
+                            <!-- /.tab-content -->
+                        </div>
+                        <!-- nav-tabs-custom -->
+                    </div>
+                </div>
+
+            </section>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Create the tabs -->
+            <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+                <li class="active"><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a>
+                </li>
+                <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <!-- Home tab content -->
+                <div class="tab-pane active" id="control-sidebar-home-tab">
+                    <h3 class="control-sidebar-heading">Recent Activity</h3>
+                    <ul class="control-sidebar-menu">
+                        <li>
+                            <a href="javascript:;">
+                                <i class="menu-icon fa fa-birthday-cake bg-red"></i>
+
+                                <div class="menu-info">
+                                    <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+
+                                    <p>Will be 23 on April 24th</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.control-sidebar-menu -->
+
+                    <h3 class="control-sidebar-heading">Tasks Progress</h3>
+                    <ul class="control-sidebar-menu">
+                        <li>
+                            <a href="javascript:;">
+                                <h4 class="control-sidebar-subheading">
+                                    Custom Template Design
+                                    <span class="pull-right-container">
+                                        <span class="label label-danger pull-right">70%</span>
+                                    </span>
+                                </h4>
+
+                                <div class="progress progress-xxs">
+                                    <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.control-sidebar-menu -->
+
+                </div>
+                <!-- /.tab-pane -->
+                <!-- Stats tab content -->
+                <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
+                <!-- /.tab-pane -->
+                <!-- Settings tab content -->
+                <div class="tab-pane" id="control-sidebar-settings-tab">
+                    <form method="post">
+                        <h3 class="control-sidebar-heading">General Settings</h3>
+
+                        <div class="form-group">
+                            <label class="control-sidebar-subheading">
+                                Report panel usage
+                                <input type="checkbox" class="pull-right" checked>
+                            </label>
+
+                            <p>
+                                Some information about this general settings option
+                            </p>
+                        </div>
+                        <!-- /.form-group -->
+                    </form>
+                </div>
+                <!-- /.tab-pane -->
+            </div>
+        </aside>
+        <!-- /.control-sidebar -->
+        <!-- Add the sidebar's background. This div must be placed
+  immediately after the control sidebar -->
+        <div class="control-sidebar-bg"></div>
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- REQUIRED JS SCRIPTS -->
+
+    <!-- jQuery 3 -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap 3.3.7 -->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="plugins/bootstrap-table/bootstrap-table.js"></script>
+    <!-- <script src="https://unpkg.com/bootstrap-table@1.15.4/dist/bootstrap-table-locale-all.min.js"></script> -->
+    <!-- <script src="https://unpkg.com/tableexport.jquery.plugin/tableExport.min.js"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.15.4/dist/extensions/export/bootstrap-table-export.min.js"> -->
+    </script>
+    <script src="dist/js/adminlte.min.js"></script>
+
+    <script>
+        var $table = $('#table')
+        var $remove = $('#remove')
+        var selections = [];
+
+        // function getIdSelections() {
+        //     return $.map($table.bootstrapTable('getSelections'), function (row) {
+        //         return row.id
+        //     })
+        // }
+
+        // function responseHandler(res) {
+        //     $.each(res.rows, function (i, row) {
+        //         row.state = $.inArray(row.id, selections) !== -1
+        //     })
+        //     return res
+        // }
+
+        // function detailFormatter(index, row) {
+        //     var html = []
+        //     $.each(row, function (key, value) {
+        //         html.push('<p><b>' + key + ':</b> ' + value + '</p>')
+        //     })
+        //     return html.join('')
+        // }
+
+        function operateFormatter(value, row, index) {
+            return [
+                '<div class="dropdown table-option"><button class="btn" id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-ellipsis-h" ></i></button>',
+                '<ul class="dropdown-menu" aria-labelledby="dLabel"><li><a class="dropdown-item" href="resident-view.html"><i class="fa fa-eye"></i> View Resident</a></li><li><a class="dropdown-item" href="#"><i class="fa fa-trash"></i> Delete Resident</a></li><li><a class="dropdown-item" href="#"><i class="fa fa-user-plus"></i> Add Visitor</a></li><li><a class="dropdown-item" href="#"><i class="fa fa-users"></i> Add Sub Resident</a></li></div></div>'
+            ].join('')
+        }
+
+        // window.operateEvents = {
+        //     'click .like': function (e, value, row, index) {
+        //         alert('You click like action, row: ' + JSON.stringify(row))
+        //     },
+        //     'click .remove': function (e, value, row, index) {
+        //         $table.bootstrapTable('remove', {
+        //             field: 'id',
+        //             values: [row.id]
+        //         })
+        //     }
+        // }
+
+        // function totalTextFormatter(data) {
+        //     return 'Total'
+        // }
+
+        // function totalNameFormatter(data) {
+        //     return data.length
+        // }
+
+        // function totalPriceFormatter(data) {
+        //     var field = this.field
+        //     return '$' + data.map(function (row) {
+        //         return +row[field].substring(1)
+        //     }).reduce(function (sum, i) {
+        //         return sum + i
+        //     }, 0)
+        // }
+
+        var $table = $('#table')
+
+        $(function () {
+            var data = [{
+                    'fname': 'Andrei ',
+                    'lname': 'Masharin',
+                    'type': 'Owner, Tenant',
+                    'phone': '777-444-6556',
+                    'unit': '432',
+                    'community': 'Los Alisos',
+                    'address': '2400 Harbor Boulevard ',
+                    'city': 'Costa Mesa',
+                    'state': 'CA',
+                    'zip': '94454',
+                },
+                {
+                    'fname': 'Anje',
+                    'lname': 'Keizer',
+                    'type': 'N/A',
+                    'phone': '713-810-8418',
+                    'unit': '343',
+                    'community': 'Cameron',
+                    'address': '3848 Michael Street',
+                    'city': 'Hendley',
+                    'state': 'NE',
+                    'zip': '68946',
+                },
+                {
+                    'fname': 'Arina',
+                    'lname': 'Belomestnykh',
+                    'type': 'Owner, Tenant',
+                    'phone': '937-755-9651',
+                    'unit': '454',
+                    'community': 'Fort Kent',
+                    'address': '1918  Crim Lane',
+                    'city': 'New Madison',
+                    'state': 'OH',
+                    'zip': '45346',
+                },
+                {
+                    'fname': 'Darius',
+                    'lname': 'Cummings',
+                    'type': 'N/A',
+                    'phone': '937-755-9651',
+                    'unit': '123',
+                    'community': 'Dennehotso',
+                    'address': '3848  Michael Street',
+                    'city': 'Costa Mesa',
+                    'state': 'NE',
+                    'zip': '68946',
+                },
+                {
+                    'fname': 'Francisco',
+                    'lname': 'Maia',
+                    'type': 'Owner, Tenant',
+                    'phone': '937-755-9651',
+                    'unit': '565',
+                    'community': 'Cameron',
+                    'address': '3848 Michael Street',
+                    'city': 'Hendley',
+                    'state': 'NE',
+                    'zip': '45346',
+                },
+                {
+                    'fname': 'Chinelo',
+                    'lname': 'Chyke',
+                    'type': 'N/A',
+                    'phone': '937-755-9651',
+                    'unit': '545',
+                    'community': 'Dennehotso',
+                    'address': '3848 Michael Street',
+                    'city': 'Costa Mesa',
+                    'state': 'NE',
+                    'zip': '68946',
+                }, {
+                    'fname': 'Andrei ',
+                    'lname': 'Masharin',
+                    'type': 'Owner, Tenant',
+                    'phone': '777-444-6556',
+                    'unit': '432',
+                    'community': 'Los Alisos',
+                    'address': '2400 Harbor Boulevard ',
+                    'city': 'Costa Mesa',
+                    'state': 'CA',
+                    'zip': '94454',
+                },
+                {
+                    'fname': 'Anje',
+                    'lname': 'Keizer',
+                    'type': 'N/A',
+                    'phone': '713-810-8418',
+                    'unit': '343',
+                    'community': 'Cameron',
+                    'address': '3848 Michael Street',
+                    'city': 'Hendley',
+                    'state': 'NE',
+                    'zip': '68946',
+                },
+                {
+                    'fname': 'Arina',
+                    'lname': 'Belomestnykh',
+                    'type': 'Owner, Tenant',
+                    'phone': '937-755-9651',
+                    'unit': '454',
+                    'community': 'Fort Kent',
+                    'address': '1918  Crim Lane',
+                    'city': 'New Madison',
+                    'state': 'OH',
+                    'zip': '45346',
+                },
+                {
+                    'fname': 'Darius',
+                    'lname': 'Cummings',
+                    'type': 'N/A',
+                    'phone': '937-755-9651',
+                    'unit': '123',
+                    'community': 'Dennehotso',
+                    'address': '3848  Michael Street',
+                    'city': 'Costa Mesa',
+                    'state': 'NE',
+                    'zip': '68946',
+                },
+                {
+                    'fname': 'Francisco',
+                    'lname': 'Maia',
+                    'type': 'Owner, Tenant',
+                    'phone': '937-755-9651',
+                    'unit': '565',
+                    'community': 'Cameron',
+                    'address': '3848 Michael Street',
+                    'city': 'Hendley',
+                    'state': 'NE',
+                    'zip': '45346',
+                },
+                {
+                    'fname': 'Chinelo',
+                    'lname': 'Chyke',
+                    'type': 'N/A',
+                    'phone': '937-755-9651',
+                    'unit': '545',
+                    'community': 'Dennehotso',
+                    'address': '3848 Michael Street',
+                    'city': 'Costa Mesa',
+                    'state': 'NE',
+                    'zip': '68946',
+                }, {
+                    'fname': 'Andrei ',
+                    'lname': 'Masharin',
+                    'type': 'Owner, Tenant',
+                    'phone': '777-444-6556',
+                    'unit': '432',
+                    'community': 'Los Alisos',
+                    'address': '2400 Harbor Boulevard ',
+                    'city': 'Costa Mesa',
+                    'state': 'CA',
+                    'zip': '94454',
+                },
+                {
+                    'fname': 'Anje',
+                    'lname': 'Keizer',
+                    'type': 'N/A',
+                    'phone': '713-810-8418',
+                    'unit': '343',
+                    'community': 'Cameron',
+                    'address': '3848 Michael Street',
+                    'city': 'Hendley',
+                    'state': 'NE',
+                    'zip': '68946',
+                },
+                {
+                    'fname': 'Arina',
+                    'lname': 'Belomestnykh',
+                    'type': 'Owner, Tenant',
+                    'phone': '937-755-9651',
+                    'unit': '454',
+                    'community': 'Fort Kent',
+                    'address': '1918  Crim Lane',
+                    'city': 'New Madison',
+                    'state': 'OH',
+                    'zip': '45346',
+                },
+                {
+                    'fname': 'Darius',
+                    'lname': 'Cummings',
+                    'type': 'N/A',
+                    'phone': '937-755-9651',
+                    'unit': '123',
+                    'community': 'Dennehotso',
+                    'address': '3848  Michael Street',
+                    'city': 'Costa Mesa',
+                    'state': 'NE',
+                    'zip': '68946',
+                },
+                {
+                    'fname': 'Francisco',
+                    'lname': 'Maia',
+                    'type': 'Owner, Tenant',
+                    'phone': '937-755-9651',
+                    'unit': '565',
+                    'community': 'Cameron',
+                    'address': '3848 Michael Street',
+                    'city': 'Hendley',
+                    'state': 'NE',
+                    'zip': '45346',
+                },
+                {
+                    'fname': 'Chinelo',
+                    'lname': 'Chyke',
+                    'type': 'N/A',
+                    'phone': '937-755-9651',
+                    'unit': '545',
+                    'community': 'Dennehotso',
+                    'address': '3848 Michael Street',
+                    'city': 'Costa Mesa',
+                    'state': 'NE',
+                    'zip': '68946',
+                }, {
+                    'fname': 'Andrei ',
+                    'lname': 'Masharin',
+                    'type': 'Owner, Tenant',
+                    'phone': '777-444-6556',
+                    'unit': '432',
+                    'community': 'Los Alisos',
+                    'address': '2400 Harbor Boulevard ',
+                    'city': 'Costa Mesa',
+                    'state': 'CA',
+                    'zip': '94454',
+                },
+                {
+                    'fname': 'Anje',
+                    'lname': 'Keizer',
+                    'type': 'N/A',
+                    'phone': '713-810-8418',
+                    'unit': '343',
+                    'community': 'Cameron',
+                    'address': '3848 Michael Street',
+                    'city': 'Hendley',
+                    'state': 'NE',
+                    'zip': '68946',
+                },
+                {
+                    'fname': 'Arina',
+                    'lname': 'Belomestnykh',
+                    'type': 'Owner, Tenant',
+                    'phone': '937-755-9651',
+                    'unit': '454',
+                    'community': 'Fort Kent',
+                    'address': '1918  Crim Lane',
+                    'city': 'New Madison',
+                    'state': 'OH',
+                    'zip': '45346',
+                },
+                {
+                    'fname': 'Darius',
+                    'lname': 'Cummings',
+                    'type': 'N/A',
+                    'phone': '937-755-9651',
+                    'unit': '123',
+                    'community': 'Dennehotso',
+                    'address': '3848  Michael Street',
+                    'city': 'Costa Mesa',
+                    'state': 'NE',
+                    'zip': '68946',
+                },
+                {
+                    'fname': 'Francisco',
+                    'lname': 'Maia',
+                    'type': 'Owner, Tenant',
+                    'phone': '937-755-9651',
+                    'unit': '565',
+                    'community': 'Cameron',
+                    'address': '3848 Michael Street',
+                    'city': 'Hendley',
+                    'state': 'NE',
+                    'zip': '45346',
+                },
+                {
+                    'fname': 'Chinelo',
+                    'lname': 'Chyke',
+                    'type': 'N/A',
+                    'phone': '937-755-9651',
+                    'unit': '545',
+                    'community': 'Dennehotso',
+                    'address': '3848 Michael Street',
+                    'city': 'Costa Mesa',
+                    'state': 'NE',
+                    'zip': '68946',
+                }, {
+                    'fname': 'Andrei ',
+                    'lname': 'Masharin',
+                    'type': 'Owner, Tenant',
+                    'phone': '777-444-6556',
+                    'unit': '432',
+                    'community': 'Los Alisos',
+                    'address': '2400 Harbor Boulevard ',
+                    'city': 'Costa Mesa',
+                    'state': 'CA',
+                    'zip': '94454',
+                },
+                {
+                    'fname': 'Anje',
+                    'lname': 'Keizer',
+                    'type': 'N/A',
+                    'phone': '713-810-8418',
+                    'unit': '343',
+                    'community': 'Cameron',
+                    'address': '3848 Michael Street',
+                    'city': 'Hendley',
+                    'state': 'NE',
+                    'zip': '68946',
+                },
+                {
+                    'fname': 'Arina',
+                    'lname': 'Belomestnykh',
+                    'type': 'Owner, Tenant',
+                    'phone': '937-755-9651',
+                    'unit': '454',
+                    'community': 'Fort Kent',
+                    'address': '1918  Crim Lane',
+                    'city': 'New Madison',
+                    'state': 'OH',
+                    'zip': '45346',
+                },
+                {
+                    'fname': 'Darius',
+                    'lname': 'Cummings',
+                    'type': 'N/A',
+                    'phone': '937-755-9651',
+                    'unit': '123',
+                    'community': 'Dennehotso',
+                    'address': '3848  Michael Street',
+                    'city': 'Costa Mesa',
+                    'state': 'NE',
+                    'zip': '68946',
+                },
+                {
+                    'fname': 'Francisco',
+                    'lname': 'Maia',
+                    'type': 'Owner, Tenant',
+                    'phone': '937-755-9651',
+                    'unit': '565',
+                    'community': 'Cameron',
+                    'address': '3848 Michael Street',
+                    'city': 'Hendley',
+                    'state': 'NE',
+                    'zip': '45346',
+                },
+                {
+                    'fname': 'Chinelo',
+                    'lname': 'Chyke',
+                    'type': 'N/A',
+                    'phone': '937-755-9651',
+                    'unit': '545',
+                    'community': 'Dennehotso',
+                    'address': '3848 Michael Street',
+                    'city': 'Costa Mesa',
+                    'state': 'NE',
+                    'zip': '68946',
+                }, {
+                    'fname': 'Andrei ',
+                    'lname': 'Masharin',
+                    'type': 'Owner, Tenant',
+                    'phone': '777-444-6556',
+                    'unit': '432',
+                    'community': 'Los Alisos',
+                    'address': '2400 Harbor Boulevard ',
+                    'city': 'Costa Mesa',
+                    'state': 'CA',
+                    'zip': '94454',
+                },
+                {
+                    'fname': 'Anje',
+                    'lname': 'Keizer',
+                    'type': 'N/A',
+                    'phone': '713-810-8418',
+                    'unit': '343',
+                    'community': 'Cameron',
+                    'address': '3848 Michael Street',
+                    'city': 'Hendley',
+                    'state': 'NE',
+                    'zip': '68946',
+                },
+                {
+                    'fname': 'Arina',
+                    'lname': 'Belomestnykh',
+                    'type': 'Owner, Tenant',
+                    'phone': '937-755-9651',
+                    'unit': '454',
+                    'community': 'Fort Kent',
+                    'address': '1918  Crim Lane',
+                    'city': 'New Madison',
+                    'state': 'OH',
+                    'zip': '45346',
+                },
+                {
+                    'fname': 'Darius',
+                    'lname': 'Cummings',
+                    'type': 'N/A',
+                    'phone': '937-755-9651',
+                    'unit': '123',
+                    'community': 'Dennehotso',
+                    'address': '3848  Michael Street',
+                    'city': 'Costa Mesa',
+                    'state': 'NE',
+                    'zip': '68946',
+                },
+                {
+                    'fname': 'Francisco',
+                    'lname': 'Maia',
+                    'type': 'Owner, Tenant',
+                    'phone': '937-755-9651',
+                    'unit': '565',
+                    'community': 'Cameron',
+                    'address': '3848 Michael Street',
+                    'city': 'Hendley',
+                    'state': 'NE',
+                    'zip': '45346',
+                },
+                {
+                    'fname': 'Chinelo',
+                    'lname': 'Chyke',
+                    'type': 'N/A',
+                    'phone': '937-755-9651',
+                    'unit': '545',
+                    'community': 'Dennehotso',
+                    'address': '3848 Michael Street',
+                    'city': 'Costa Mesa',
+                    'state': 'NE',
+                    'zip': '68946',
+                }, {
+                    'fname': 'Andrei ',
+                    'lname': 'Masharin',
+                    'type': 'Owner, Tenant',
+                    'phone': '777-444-6556',
+                    'unit': '432',
+                    'community': 'Los Alisos',
+                    'address': '2400 Harbor Boulevard ',
+                    'city': 'Costa Mesa',
+                    'state': 'CA',
+                    'zip': '94454',
+                },
+                {
+                    'fname': 'Anje',
+                    'lname': 'Keizer',
+                    'type': 'N/A',
+                    'phone': '713-810-8418',
+                    'unit': '343',
+                    'community': 'Cameron',
+                    'address': '3848 Michael Street',
+                    'city': 'Hendley',
+                    'state': 'NE',
+                    'zip': '68946',
+                },
+                {
+                    'fname': 'Arina',
+                    'lname': 'Belomestnykh',
+                    'type': 'Owner, Tenant',
+                    'phone': '937-755-9651',
+                    'unit': '454',
+                    'community': 'Fort Kent',
+                    'address': '1918  Crim Lane',
+                    'city': 'New Madison',
+                    'state': 'OH',
+                    'zip': '45346',
+                },
+                {
+                    'fname': 'Darius',
+                    'lname': 'Cummings',
+                    'type': 'N/A',
+                    'phone': '937-755-9651',
+                    'unit': '123',
+                    'community': 'Dennehotso',
+                    'address': '3848  Michael Street',
+                    'city': 'Costa Mesa',
+                    'state': 'NE',
+                    'zip': '68946',
+                },
+                {
+                    'fname': 'Francisco',
+                    'lname': 'Maia',
+                    'type': 'Owner, Tenant',
+                    'phone': '937-755-9651',
+                    'unit': '565',
+                    'community': 'Cameron',
+                    'address': '3848 Michael Street',
+                    'city': 'Hendley',
+                    'state': 'NE',
+                    'zip': '45346',
+                },
+                {
+                    'fname': 'Chinelo',
+                    'lname': 'Chyke',
+                    'type': 'N/A',
+                    'phone': '937-755-9651',
+                    'unit': '545',
+                    'community': 'Dennehotso',
+                    'address': '3848 Michael Street',
+                    'city': 'Costa Mesa',
+                    'state': 'NE',
+                    'zip': '68946',
+                }
+            ]
+            $table.bootstrapTable({
+                data: data
+            })
+        })
+
+
+
+        // Events
+        $('.dropdown-container')
+            .on('click', '.dropdown-button', function () {
+                $(this).siblings('.dropdown-list').toggle();
+            })
+            .on('input', '.dropdown-search', function () {
+                var target = $(this);
+                var dropdownList = target.closest('.dropdown-list');
+                var search = target.val().toLowerCase();
+
+                if (!search) {
+                    dropdownList.find('li').show();
+                    return false;
+                }
+
+                dropdownList.find('li').each(function () {
+                    var text = $(this).text().toLowerCase();
+                    var match = text.indexOf(search) > -1;
+                    $(this).toggle(match);
+                });
+            })
+            .on('change', '[type="checkbox"]', function () {
+                var container = $(this).closest('.dropdown-container');
+                var numChecked = container.find('[type="checkbox"]:checked').length;
+                container.find('.quantity').text(numChecked || 'Any');
+            });
+
+
+
+
+        $(document).ready(function () {
+
+            var seachHtml = "";
+
+            var checkBoxIdNoPart = 0;
+            $("table.table-bordered thead tr th div.th-inner").each(function () {
+                checkBoxIdNoPart++;
+                seachHtml +=
+                    '<li><input id="' + checkBoxIdNoPart + '"  class="tech ' + checkBoxIdNoPart +
+                    '" type="checkbox">' +
+                    '<label for="' + checkBoxIdNoPart + '">' + $(this).html() + '</label></li>';
+            });
+
+            $('.dropdown-list ul').append(seachHtml);
+
+
+            $("#search_input").keyup(function () {
+                var searchText = $(this).val().toLowerCase();
+                // Show only matching TR, hide rest of them
+                $.each($("#table tbody td:nth-child(3)"), function () {
+                    if ($(this).text().toLowerCase().indexOf(searchText) != -1)
+                        $(this).parent().show();
+                    else
+                        $(this).parent().hide();
+                });
+            });
+
+
+
+            $(document).on('click', '.dropdown-container.advance-search', function (e) {
+                e.stopPropagation();
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>
